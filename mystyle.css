@@ -1,0 +1,584 @@
+/* Reset margin dan padding untuk memastikan konsistensi */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f1111;
+  color: #fff;
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.search {
+  flex-grow: 1;
+  max-width: 400px;
+  margin: 0 20px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.search::placeholder {
+  color: #ccc;
+}
+
+.search:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.nav-links li a:hover {
+  background-color: yellowgreen;
+}
+
+.login-btn {
+  cursor: pointer;
+  background-color: yellowgreen;
+  color: white;
+  font-size: 14px;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.login-btn:hover {
+  background-color: grey;
+}
+
+.hero{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  transition: background-image 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+#Hero-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: yellowgreen;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-buttons button:hover {
+  background-color: #8fbc8f;
+}
+
+.wonders, .reasons, .vacation, .explore {
+  padding: 60px 30px;
+  text-align: center;
+  background-color: black;
+  margin-top: 80px;
+  border-radius: 8px;
+}
+
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 220px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+.card:hover {
+  background-color: yellowgreen;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.reason-items {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.reason-items > div {
+  width: 250px;
+  text-align: left;
+}
+
+.vacation-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.vacation-gallery img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.vacation-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.vacation-text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.vacation-text h2 {
+  margin-bottom: 10px;
+}
+
+.explore-img {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.explore-img img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+}
+
+.explore-labels {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 300px;
+  font-size: 14px;
+  line-height: 1.5;
+
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .search {
+    max-width: 180px;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .reason-items {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .vacation-gallery img {
+    width: 100px;
+    height: 70px;
+  }
+}
+
+#displayed-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.6; 
+  transition: opacity 0.5s ease;
+}
+  
+  .explore-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  background: url('your-image.jpg') no-repeat center center/cover; 
+  padding: 20px;
+}
+
+.explore-labels {
+  width: 100%;
+  max-width: 800px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.highlight {
+  color: #f9d342; 
+  font-weight: bold;
+}
+
+
+
+.about {
+  background: url('https://source.unsplash.com/1600x900/?banyuwangi,nature') no-repeat center center/cover;
+  padding: 80px 20px;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+
+
+.tagline {
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+strong {
+  color: #ffd700;
+}
+
+.welcome {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+ .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .slideshow {
+      width: 100%;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+      margin: 30px 0;
+      border-radius: 10px;
+    }
+
+    .slides {
+      display: flex;
+      width: 500%;
+      animation: slide 12s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0%   { margin-left: 0%; }
+      20%  { margin-left: 0%; }
+      25%  { margin-left: -100%; }
+      45%  { margin-left: -100%; }
+      50%  { margin-left: -200%; }
+      70%  { margin-left: -200%; }
+      75%  { margin-left: -300%; }
+      95%  { margin-left: -300%; }
+      100% { margin-left: -400%; }
+    }
+    
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.buttons a {
+  padding: 10px 20px;
+  background-color: yellowgreen;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.section {
+  display: none;
+  animation: fade 0.5s ease-in-out;
+}
+
+.section:target {
+  display: block;
+}
+
+.wisata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.section h2 {
+  color: #ffcc00;
+  text-align: center;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.wisata {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card2 {
+  width: 280px;
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card2:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card2 img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card2 h4 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.card2 p {
+  font-size: 14px;
+  padding: 0 10px 10px;
+  color: #ddd;
+}
+
+
+/* ABOUT PAGE - KHUSUS */
+.about-container {
+  padding: 100px 20px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #121212;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  color: #f0f0f0;
+}
+
+.about-title-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-title-section h1 {
+  font-size: 36px;
+  color: #ffcc00;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Blok isi utama */
+.about-section {
+  margin-bottom: 40px;
+  line-height: 1.7;
+  background-color: #1e1e1e;
+  padding: 25px 30px;
+  border-left: 4px solid yellowgreen;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-5px);
+}
+
+.about-section h2 {
+  color: #90ee90;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.about-section p,
+.about-section li {
+  color: #ddd;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.about-section ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.about-cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.about-cta p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+
+
+.container-blogs{
+display: flex;
+gap: 2%;
+justify-content: space-evenly;
+align-items: flex-start;
+padding: 30px 20px;
+}
+
+.place {
+position: relative;
+text-align: center;
+width: 20%;
+}
+
+.place img {
+width: 100%;
+height: 250px; /* ini membuat gambar tampak vertikal */
+object-fit: cover;
+border-radius: 5px;
+}
+
+.rank {
+position: absolute;
+top: 10px;
+left: 10px;
+font-size: 24px;
+color: yellowgreen;
+font-weight: bold;
+}
+
+.place h3 {
+margin-top: 10px;
+font-size: 16px;
+}
+
+.blog-section-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 30px 0 20px;
+  color: yellowgreen;
+}
